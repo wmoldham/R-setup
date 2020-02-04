@@ -70,7 +70,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 Change default terminal in Rstudio to `/bin/zsh`
 
-<<<<<<< HEAD
 # Git and GitHub
 
 Follow the instructions from [happygitwithr.com](https://happygitwithr.com/). 
@@ -111,24 +110,9 @@ install_github("ropensci/git2r")
 git2r::libgit2_features()
 ```
 
+Check to see how things are looking:
 
-
-
-
-=======
-# Git and Github
-
-Follow the instructions from [happygitwithr.com](https://happygitwithr.com/). 
-
-Installing Xcode command line tools above should install git. 
-
-Install a git client [Gitkraken](https://www.gitkraken.com/download/mac)
-
-Set up SSH keys for Github
-
-```{zsh, eval = FALSE}
-$ ssh-keygen -t rsa -b 4096 -C "USEFUL-COMMENT"
+```{r, eval = FALSE}
+git_sitrep()
 ```
-
->>>>>>> 290bf8a... developing report
 
