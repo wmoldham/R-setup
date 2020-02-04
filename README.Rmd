@@ -103,6 +103,12 @@ Check that SSH agent is running
 eval "$(ssh-agent -s)"
 ```
 
+Add keys to SSH agent
+
+```{zsh, eval = FALSE}
+ssh-add -K ~/.ssh/id_rsa
+```
+
 Copy `SSH-config` to `~/.ssh/config`
 
 Provide SSH keys to [GitHub](https://github.com/settings/keys)
