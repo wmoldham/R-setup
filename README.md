@@ -3,7 +3,11 @@ R Setup
 
 # Overview
 
+<<<<<<< HEAD
 How to get R up and running after a fresh install.
+=======
+How to get R set up after a fresh install.
+>>>>>>> master
 
 # Install R
 
