@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Overview
 
-How to get R up and running after a fresh install. 
+How to get R up and running after a fresh install.
 
 ## Install R
 
