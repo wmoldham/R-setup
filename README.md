@@ -1,11 +1,11 @@
 R Setup
 ================
 
-# Overview
+## Overview
 
 How to get R up and running after a fresh install.
 
-# Install R
+## Install R
 
 Download and install latest version of R
 [here](https://cran.r-project.org/)
@@ -20,7 +20,7 @@ install.packages("devtools")
 devtools::install_github("r-lib/devtools")
 ```
 
-# Personalize
+## Personalize
 
 Set theme to Tomorrow Night Bright
 
@@ -36,7 +36,7 @@ Update `.Rprofile` based on advice from
 usethis::edit_r_profile()
 ```
 
-# Update terminal
+## Update terminal
 
 Follow general steps described
 [here](https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/)
@@ -68,7 +68,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 Change default terminal in Rstudio to `/bin/zsh`
 
-# Git and GitHub
+## Git and GitHub
 
 Follow the instructions from
 [happygitwithr.com](https://happygitwithr.com/).
