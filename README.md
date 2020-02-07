@@ -10,10 +10,10 @@ How to get R up and running after a fresh install.
 Download and install latest version of R
 [here](https://cran.r-project.org/)
 
-Download and install Rstudio [preview version
-here](https://rstudio.com/products/rstudio/download/preview/)
+Download and install Rstudio preview version
+[here](https://rstudio.com/products/rstudio/download/preview/)
 
-Install `devtools`
+Install `devtools` and update from GitHub
 
 ``` r
 install.packages("devtools")
@@ -75,7 +75,8 @@ Follow the instructions from
 
 Installing Xcode command line tools above should install Git.
 
-Install a Git client [GitKraken](https://www.gitkraken.com/download/mac)
+Install the [GitKraken](https://www.gitkraken.com/download/mac) Git
+client
 
 Set up Git config. Make sure email address matches what is in GitHub,
 especially if email privacy settings are activated.
@@ -83,6 +84,12 @@ especially if email privacy settings are activated.
 ``` r
 use_git_config(user.name = "William Oldham", 
                user.email = "44209581+wmoldham@users.noreply.github.com")
+```
+
+Vaccinate the global `.gitignore`
+
+``` r
+git_vaccinate()
 ```
 
 Set up the default editor for Git
@@ -104,13 +111,23 @@ Check that SSH agent is running
 eval "$(ssh-agent -s)"
 ```
 
+Copy contents from `SSH-config` in this repo to `~/.ssh/config`
+
+Add keys to SSH agent
+
+``` zsh
+ssh-add -K ~/.ssh/id_rsa
+```
+
 Copy `SSH-config` to `~/.ssh/config`
 
-Provide SSH keys to [GitHub](https://github.com/settings/keys)
+Copy SSH key
 
 ``` zsh
 pbcopy < ~/.ssh/id_rsa.pub
 ```
+
+Provide SSH keys to GitHub [here](https://github.com/settings/keys)
 
 Set up a personal access token (PAT)
 
@@ -118,13 +135,15 @@ Set up a personal access token (PAT)
 browse_github_token()
 ```
 
-Then add `GITHUB_PAT=XXXXXX` to `.Renviron`
+Copy the token
 
 ``` r
 edit_r_environ()
 ```
 
-A few other details to make sure `git2r` is setup appropriately.
+Then add `GITHUB_PAT=` the token to `.Renviron`
+
+Complete the `git2r` setup to use SSH keys
 
 ``` zsh
 brew install libssh2
@@ -135,6 +154,9 @@ brew install libgit2
 install_github("ropensci/git2r")
 git2r::libgit2_features()
 ```
+
+If this fails, consider problematic `Makevars` file (similar that used
+to compile `data.table` from source).
 
 Check to see how things are looking:
 
