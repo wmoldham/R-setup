@@ -47,8 +47,7 @@ Install command line interface tools for Xcode
 xcode-select —-install
 ```
 
-Install
-homebrew
+Install homebrew
 
 ``` zsh
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -112,11 +111,8 @@ Check that SSH agent is running
 eval "$(ssh-agent -s)"
 ```
 
-<<<<<<< HEAD
 Copy contents from `SSH-config` in this repo to `~/.ssh/config`
 
-=======
->>>>>>> master
 Add keys to SSH agent
 
 ``` zsh
