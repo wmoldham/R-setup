@@ -27,6 +27,7 @@ options(max.print = 100)
 # devtools setup
 options(
   usethis.full_name = "William Oldham",
+  usethis.protocol = "ssh", 
   usethis.description = list(
     `Authors@R` = 'person(
     given = "William",
@@ -36,9 +37,7 @@ options(
     comment = c(ORCID = "0000-0003-3029-4866"))',
     License = "MIT + file LICENSE",
     Version = "0.0.0.9000"
-  ),
-  usethis.protocol = "ssh"
-  
+  )
 )
 
 # use renv from global .Rprofile
