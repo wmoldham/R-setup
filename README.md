@@ -20,14 +20,24 @@ install.packages("devtools")
 devtools::install_github("r-lib/devtools")
 ```
 
-## Personalize
+## Rstudio preferences
 
-Set theme to Tomorrow Night Bright
+***General***
 
 Turn off options to:
 
   - restore `.Rdata` to workspace at startup
   - save workspace to `.Rdata` on exit
+
+***Code***
+
+Allow scroll past the end of the document
+
+***Appearance***
+
+Set theme to Tomorrow Night Bright
+
+## Customization
 
 Update `.Rprofile` based on advice from
 [here](http://kevinushey.github.io/blog/2015/02/02/rprofile-essentials/):
@@ -155,11 +165,16 @@ install_github("ropensci/git2r")
 git2r::libgit2_features()
 ```
 
-If this fails, consider problematic `Makevars` file (similar that used
-to compile `data.table` from source).
+If this fails, consider problematic `Makevars` file (similar to that
+used to compile `data.table` from source).
 
 Check to see how things are looking:
 
 ``` r
 git_sitrep()
 ```
+
+## Miscellany
+
+For Cairo to work, X11 for Mac, “XQuartz”, must be installed. Download
+[here](https://www.xquartz.org/). Restart system.

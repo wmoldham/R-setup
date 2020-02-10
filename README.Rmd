@@ -24,14 +24,24 @@ install.packages("devtools")
 devtools::install_github("r-lib/devtools")
 ```
 
-## Personalize
+## Rstudio preferences
 
-Set theme to Tomorrow Night Bright
+_**General**_
 
 Turn off options to:
 
 * restore `.Rdata` to workspace at startup
 * save workspace to `.Rdata` on exit
+
+_**Code**_
+
+Allow scroll past the end of the document
+
+_**Appearance**_
+
+Set theme to Tomorrow Night Bright
+
+## Customization
     
 Update `.Rprofile` based on advice from [here](http://kevinushey.github.io/blog/2015/02/02/rprofile-essentials/):
 
@@ -153,7 +163,7 @@ install_github("ropensci/git2r")
 git2r::libgit2_features()
 ```
 
-If this fails, consider problematic `Makevars` file (similar that used to compile `data.table` from source). 
+If this fails, consider problematic `Makevars` file (similar to that used to compile `data.table` from source). 
 
 Check to see how things are looking:
 
