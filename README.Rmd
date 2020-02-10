@@ -161,3 +161,8 @@ Check to see how things are looking:
 git_sitrep()
 ```
 
+## Miscellany
+
+For Cairo to work, X11 for Mac, "XQuartz", must be installed. Download [here](https://www.xquartz.org/). Restart system.
+
+
