@@ -178,3 +178,9 @@ git_sitrep()
 
 For Cairo to work, X11 for Mac, “XQuartz”, must be installed. Download
 [here](https://www.xquartz.org/). Restart system.
+
+Install gfortran
+
+``` zsh
+brew cask install gfortran
+```
