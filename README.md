@@ -57,7 +57,8 @@ Install command line interface tools for Xcode
 xcode-select —-install
 ```
 
-Install homebrew
+Install
+homebrew
 
 ``` zsh
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -184,3 +185,18 @@ Install gfortran
 ``` zsh
 brew cask install gfortran
 ```
+
+When referencing a program installed by homebrew, make sure to point to
+`/usr/local/opt` as this location will be updated as new versions of
+software are installed. Do not point to the homebrew `Cellar` folder.
+
+## Compiler information
+
+`~/.R/Makevars` controls what compilers are used. The file in
+`key-files` has sections for both clang and gcc. To compile
+`data.table`, use clang with all lines uncommented. For `nlme` or
+problems with the installation of other packages (*i.e.*, `git2r` or
+`stringi`), use the gcc section or comment out the entire file.
+
+Can use `writeLines(readLines("~/.R/Makevars"))` to check what R thinks
+is in this file.
